@@ -1,6 +1,6 @@
 services:
   db:
-    container_name: ${PROYECTO}-WPDB
+    container_name: ${PROJETCT_NAME}_WPDB
     # We use a mariadb image which supports both amd64 & arm64 architecture
     image: mariadb:10.6.4-focal
     # If you really want to use MySQL, uncomment the following line
@@ -20,7 +20,7 @@ services:
       - 3306
       - 33060
   wordpress:
-    container_name: ${PROYECTO}-WP
+    container_name: ${PROJETCT_NAME}_WP
     image: wordpress:latest
     volumes:
       - wp_data:/var/www/html
